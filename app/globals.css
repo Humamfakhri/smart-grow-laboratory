@@ -54,7 +54,8 @@
   --primary: oklch(0.41 0.05 202.22);
   --primary-foreground: oklch(0.985 0 0);
   /* --secondary: oklch(0.968 0.007 247.896); */
-  --secondary: oklch(87.1% 0.15 154.449);
+  /* --secondary: oklch(87.1% 0.15 154.449); */
+  --secondary: oklch(0.95 0.09 153.3);
   --secondary-foreground: oklch(0.21 0.006 285.885);
   --muted: oklch(0.967 0.001 286.375);
   --muted-foreground: oklch(0.552 0.016 285.938);
@@ -117,9 +118,21 @@
 
 @layer base {
   * {
-    @apply border-border outline-ring/50;
+    @apply border-border outline-ring/50 tracking-wide leading-relaxed;
   }
+
   body {
     @apply bg-background text-foreground font-sans;
+  }
+
+  
+  .under-line::after {
+    content: '';
+    display: block;
+    width: 4%;
+    height: 2px;
+    background-color: var(--primary);
+    margin: .5rem 0;
+    border-radius: 10px;
   }
 }

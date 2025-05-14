@@ -8,20 +8,21 @@ import { Button } from "./ui/button";
 export default function Navbar() {
   const menuItems = [
     { href: "/", label: "Beranda", urlPathname: "" },
-    { href: "/tentang", label: "Tentang", urlPathname: "tentang" },
-    { href: "/proyek", label: "Proyek", urlPathname: "proyek" },
-    { href: "/publikasi", label: "Publikasi", urlPathname: "publikasi" },
     { href: "/berita-dan-kegiatan", label: "Berita & Kegiatan", urlPathname: "berita-dan-kegiatan" },
+    { href: "/proyek", label: "Proyek", urlPathname: "proyek" },
+    // { href: "/publikasi", label: "Publikasi", urlPathname: "publikasi" },
+    { href: "/tentang", label: "Tentang", urlPathname: "tentang" },
     { href: "/kontak", label: "Kontak", urlPathname: "kontak" },
   ];
 
   const pathname = usePathname();
 
   return (
-    <nav className="sticky top-0 flex items-center justify-between bg-white px-16 py-4">
+    <nav className="sticky top-0 flex items-center justify-between bg-white px-16 py-4 z-10">
       <div className="flex items-center gap-2">
-        <Image src="/logo_darkblue.png" alt="logo" width={32} height={32} />
-        <h1 className="text-lg font-extrabold text-primary tracking-tighter">Smart Grow Lab</h1>
+        <Image src="/logo_full.png" alt="logo" width={200} height={34.38} />
+        {/* <Image src="/logo_darkblue.png" alt="logo" width={32} height={32} />
+        <h1 className="text-lg font-extrabold text-primary tracking-tighter">Smart Grow Lab</h1> */}
       </div>
       <ul className="flex gap-5">
         {menuItems.map(({ href, label, urlPathname }) => {
